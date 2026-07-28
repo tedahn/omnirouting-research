@@ -1,0 +1,1 @@
+outcome_id,company_id,method_id,claim_id,outcome_type,metric_name,metric_definition,baseline,reported_result,unit,dataset_or_workload,evaluation_setting,sample_size,time_window,statistical_method,cost_context,latency_context,quality_context,safety_context,independent_replication,limitations,evidence_state,source_ids,as_of,refresh_by,owner,notes
