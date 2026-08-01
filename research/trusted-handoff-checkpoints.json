@@ -1,0 +1,18 @@
+{
+  "checkpoints": [
+    {
+      "checkpoint_id": "CHECKPOINT-001",
+      "decision_owner": "Workspace requester acting as research lead",
+      "event_count": 2,
+      "external_signature_evidence": null,
+      "handoff_id": "HANDOFF-001",
+      "head_event_id": "EVENT-002",
+      "head_hash": "7b76dec742ec39acb454a37298b0b0fe7e589c9031cfaa966505f1567bc308ae",
+      "notes": "Attests that the completed GATE-001 handoff is consumed; trust becomes external when the named human repeats the exact checkpoint token in the GATE-002 decision message",
+      "signed_at": null,
+      "status": "pending_human_signature",
+      "terminal_state": "consumed"
+    }
+  ],
+  "version": 1
+}

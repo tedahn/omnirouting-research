@@ -1,0 +1,123 @@
+{
+  "fixture_id": "EVAL-006-HOLDOUT-v1",
+  "validation_only": true,
+  "description": "Synthetic full-information confirmation fixture for controller-behavior validation only.",
+  "models": [
+    "model_a",
+    "model_b"
+  ],
+  "tasks": [
+    {
+      "task_id": "H1",
+      "complexity": "low",
+      "model_a": {
+        "success": 1,
+        "cost_units": 1,
+        "latency_ms": 95
+      },
+      "model_b": {
+        "success": 1,
+        "cost_units": 4,
+        "latency_ms": 195
+      }
+    },
+    {
+      "task_id": "H2",
+      "complexity": "low",
+      "model_a": {
+        "success": 1,
+        "cost_units": 1,
+        "latency_ms": 105
+      },
+      "model_b": {
+        "success": 1,
+        "cost_units": 4,
+        "latency_ms": 205
+      }
+    },
+    {
+      "task_id": "H3",
+      "complexity": "low",
+      "model_a": {
+        "success": 1,
+        "cost_units": 1,
+        "latency_ms": 100
+      },
+      "model_b": {
+        "success": 1,
+        "cost_units": 4,
+        "latency_ms": 200
+      }
+    },
+    {
+      "task_id": "H4",
+      "complexity": "low",
+      "model_a": {
+        "success": 1,
+        "cost_units": 1,
+        "latency_ms": 110
+      },
+      "model_b": {
+        "success": 1,
+        "cost_units": 4,
+        "latency_ms": 210
+      }
+    },
+    {
+      "task_id": "H5",
+      "complexity": "high",
+      "model_a": {
+        "success": 0,
+        "cost_units": 1,
+        "latency_ms": 125
+      },
+      "model_b": {
+        "success": 1,
+        "cost_units": 4,
+        "latency_ms": 225
+      }
+    },
+    {
+      "task_id": "H6",
+      "complexity": "high",
+      "model_a": {
+        "success": 0,
+        "cost_units": 1,
+        "latency_ms": 115
+      },
+      "model_b": {
+        "success": 1,
+        "cost_units": 4,
+        "latency_ms": 215
+      }
+    },
+    {
+      "task_id": "H7",
+      "complexity": "high",
+      "model_a": {
+        "success": 0,
+        "cost_units": 1,
+        "latency_ms": 120
+      },
+      "model_b": {
+        "success": 1,
+        "cost_units": 4,
+        "latency_ms": 220
+      }
+    },
+    {
+      "task_id": "H8",
+      "complexity": "high",
+      "model_a": {
+        "success": 0,
+        "cost_units": 1,
+        "latency_ms": 130
+      },
+      "model_b": {
+        "success": 1,
+        "cost_units": 4,
+        "latency_ms": 230
+      }
+    }
+  ]
+}

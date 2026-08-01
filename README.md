@@ -15,17 +15,18 @@ Independent research workspace for studying how companies are developing omni ro
 1. Review [WORKSPACE_CHARTER.md](WORKSPACE_CHARTER.md).
 2. Review the [research methodology](research/METHODOLOGY-omni-routing.md) and [stage-gated plan](research/RESEARCH_PLAN-2026-07-27.md).
 3. Approve or revise [research/briefs/RESEARCH_BRIEF-omnirouting.md](research/briefs/RESEARCH_BRIEF-omnirouting.md).
-4. Complete [research/NEXT_ACTION-001.md](research/NEXT_ACTION-001.md) to run the bounded company-universe discovery stage.
-5. Use [project/UPLOAD_MANIFEST.md](project/UPLOAD_MANIFEST.md) to configure the corresponding ChatGPT Project manually.
+4. Complete [research/NEXT_ACTION-001.md](research/NEXT_ACTION-001.md) to consolidate the expanded company/project universe and close the Stage 1 saturation gate.
+5. Use the [continuous theory-and-test workflow](research/workflows/CONTINUOUS_THEORY_AND_TEST_WORKFLOW.md) and [one-cycle controller prompt](research/prompts/CONTINUOUS_THEORY_CYCLE_PROMPT.md) to design bounded follow-on theories and experiments without replacing the active action.
+6. Use [project/UPLOAD_MANIFEST.md](project/UPLOAD_MANIFEST.md) to configure the corresponding ChatGPT Project manually.
 
 ## Layout
 
 - `project/` — validated ChatGPT Project instructions, kickoff prompt, handbooks, and blank upload templates.
-- `research/` — active company, methodology, outcome, forecast, evidence, evaluation, brief, decision, snapshot, and next-action records.
+- `research/` — active company, methodology, outcome, forecast, evidence, evaluation, brief, decision, snapshot, workflow, prompt, and next-action records.
 - `WORKSPACE_CHARTER.md` — stable purpose, boundaries, authority, and review rules.
 - `CURRENT_STATE.md` — dated operating state and unresolved questions.
 - `WORKSPACE_ORIGIN.md` — foundry lineage and migration policy.
 
 ## Current gate
 
-The workspace is ready for bounded Stage 1 discovery after a research owner confirms the plan and data boundary. No company has been profiled and no market or technical outcome has been promoted yet. Repository initialization is not approval to upload files, connect private sources, contact companies, or make external commitments.
+Stage 1 pass 2 added material routing mechanisms, counterevidence, product surfaces, and evaluation strata, so the saturation gate remains open. Run the bounded pass-3 consolidation audit before Stage 2 profiles or theory promotion. No scientific experiment or scheduler is active, and repository work is not approval to upload private files, contact companies, spend funds, or make external commitments.

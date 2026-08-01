@@ -1,0 +1,41 @@
+{
+  "validation_only": true,
+  "fixture_id": "EVAL-006-HOLDOUT-v1",
+  "holdout_sha256": "5c29523d386e18555e5ed1eaede9105900c7f8dad85a17159ab0ec38a8381e83",
+  "frozen_rule": {
+    "low": "model_a",
+    "high": "model_b"
+  },
+  "fixed_route": {
+    "tasks": 8,
+    "successes": 8,
+    "success_rate": 1.0,
+    "total_cost_units": 20,
+    "mean_latency_ms": 162.5
+  },
+  "always_model_a": {
+    "tasks": 8,
+    "successes": 4,
+    "success_rate": 0.5,
+    "total_cost_units": 8,
+    "mean_latency_ms": 112.5
+  },
+  "always_model_b": {
+    "tasks": 8,
+    "successes": 8,
+    "success_rate": 1.0,
+    "total_cost_units": 32,
+    "mean_latency_ms": 212.5
+  },
+  "comparison_to_always_model_b": {
+    "cost_reduction_fraction": 0.375,
+    "cost_reduction_percent": 37.5,
+    "mean_latency_reduction_ms": 50.0
+  },
+  "frozen_criteria": {
+    "success_rate_equals_1": true,
+    "cost_reduction_at_least_25_percent": true,
+    "mean_latency_lower_than_always_model_b": true
+  },
+  "positive_path_result": "criteria_met_for_synthetic_fixture_only"
+}

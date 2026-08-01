@@ -34,7 +34,14 @@ Review each file through `handbook/PRE_UPLOAD_SAFETY.md` before upload. These so
 - `../research/briefs/RESEARCH_BRIEF-omnirouting.md`
 - `../research/METHODOLOGY-omni-routing.md`
 - `../research/RESEARCH_PLAN-2026-07-27.md`
+- `../research/RESEARCH_SPRINT-001.md`
 - `../research/NEXT_ACTION-001.md`
+- `../research/workflows/CONTINUOUS_THEORY_AND_TEST_WORKFLOW.md`
+- `../research/workflows/templates/THEORY_CARD.md`
+- `../research/workflows/templates/EXPERIMENT_PREREGISTRATION.md`
+- `../research/workflows/templates/RESULT_CARD.md`
+- `../research/workflows/templates/CYCLE_CHECKPOINT.md`
+- `../research/prompts/CONTINUOUS_THEORY_CYCLE_PROMPT.md`
 - `../research/profiles/COMPANY_PROFILE_TEMPLATE.md`
 - `../research/company-landscape.csv`
 - `../research/methodologies.csv`

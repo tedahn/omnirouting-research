@@ -9,6 +9,9 @@ import re
 import sys
 from pathlib import Path, PurePosixPath
 
+from validate_gate import validate_gate
+from validate_handoffs import validate_handoffs
+
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_ROOT = {
@@ -28,6 +31,9 @@ REQUIRED_RESEARCH = {
     "company-landscape.csv",
     "methodologies.csv",
     "outcomes.csv",
+    "handoffs.csv",
+    "handoff-ledger-head.json",
+    "trusted-handoff-checkpoints.json",
     "future-scenarios.csv",
     "METHODOLOGY-omni-routing.md",
     "RESEARCH_PLAN-2026-07-27.md",
@@ -36,6 +42,16 @@ REQUIRED_RESEARCH = {
     "profiles/COMPANY_PROFILE_TEMPLATE.md",
     "decisions/README.md",
     "snapshots/README.md",
+    "agents/README.md",
+    "agents/ADVISORY_CARD_TEMPLATE.md",
+    "agents/GATE_NAVIGATOR.md",
+    "agents/EVIDENCE_METHODS_CHALLENGER.md",
+    "agents/BOUNDARY_SENTINEL.md",
+    "agents/BLIND_EVALUATION_ASSISTANT.md",
+    "agents/GATE_CLERK.md",
+    "workflows/HUMAN_AI_RESEARCH_PROCESS.md",
+    "workflows/HUMAN_DECISION_AGENT_COUNCIL.md",
+    "workflows/templates/HUMAN_DECISION_PACKET.md",
 }
 
 
@@ -56,6 +72,20 @@ def main() -> int:
     missing_research = REQUIRED_RESEARCH - actual_research
     if missing_research:
         errors.append(f"Missing research state files: {sorted(missing_research)}")
+
+    gate_paths = sorted((research / "decisions").glob("GATE-*.md"))
+    if not gate_paths:
+        errors.append("No human gate records found")
+    for gate_path in gate_paths:
+        gate_result = validate_gate(gate_path)
+        for gate_error in gate_result["errors"]:
+            errors.append(f"Invalid gate {gate_path.relative_to(ROOT)}: {gate_error}")
+
+    handoff_result = validate_handoffs(
+        research / "handoffs.csv", research / "decisions"
+    )
+    for handoff_error in handoff_result["errors"]:
+        errors.append(f"Invalid handoff ledger: {handoff_error}")
 
     for path in research.glob("*.csv"):
         with path.open(newline="", encoding="utf-8") as handle:
