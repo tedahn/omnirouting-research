@@ -1,0 +1,6 @@
+{
+  "active_policy": "adaptive-score-v1",
+  "active_objective": "balanced-objective-v1",
+  "mode": "simulation_only",
+  "schema_version": "1.0"
+}

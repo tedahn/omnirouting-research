@@ -1,0 +1,81 @@
+{
+  "actions": [
+    {
+      "action": "Inspect dynamic lab context",
+      "agent_and_human_interface": "python3 -m routing_lab context",
+      "approval": "none"
+    },
+    {
+      "action": "Discover available actions",
+      "agent_and_human_interface": "python3 -m routing_lab capabilities",
+      "approval": "none"
+    },
+    {
+      "action": "List models, policies, workflows, objectives, or cases",
+      "agent_and_human_interface": "python3 -m routing_lab resource list KIND [--suite SUITE] [--allow-confirmation]",
+      "approval": "none for normal resources; confirmation case access requires --allow-confirmation"
+    },
+    {
+      "action": "Read a model, policy, workflow, objective, or case",
+      "agent_and_human_interface": "python3 -m routing_lab resource get KIND ID [--suite SUITE] [--allow-confirmation]",
+      "approval": "none for normal resources; confirmation case access requires --allow-confirmation"
+    },
+    {
+      "action": "Create a model, policy, workflow, objective, or development case",
+      "agent_and_human_interface": "python3 -m routing_lab resource put KIND FILE [--suite SUITE]",
+      "approval": "none for inactive local definitions; active policy/objective mutation uses proposals and confirmation mutation needs an explicit flag"
+    },
+    {
+      "action": "Update a model, policy, workflow, objective, or development case",
+      "agent_and_human_interface": "python3 -m routing_lab resource put KIND FILE [--suite SUITE]",
+      "approval": "none for inactive local definitions; active policy/objective mutation uses proposals and confirmation mutation needs an explicit flag"
+    },
+    {
+      "action": "Delete a model, policy, workflow, objective, or case",
+      "agent_and_human_interface": "python3 -m routing_lab resource delete KIND ID --yes [--suite SUITE]",
+      "approval": "explicit confirmation flag; active policy/objective deletion is blocked and confirmation suite needs explicit authorization"
+    },
+    {
+      "action": "Route one model or agent call",
+      "agent_and_human_interface": "python3 -m routing_lab route --request FILE [--policy ID]",
+      "approval": "none; simulation only"
+    },
+    {
+      "action": "Route all stages of an agentic workflow",
+      "agent_and_human_interface": "python3 -m routing_lab workflow ID --input FILE [--policy ID]",
+      "approval": "none; simulation only"
+    },
+    {
+      "action": "Evaluate a routing policy",
+      "agent_and_human_interface": "python3 -m routing_lab evaluate --policy ID --objective ID --suite SUITE",
+      "approval": "confirmation evaluation requires --allow-confirmation"
+    },
+    {
+      "action": "Optimize a routing policy",
+      "agent_and_human_interface": "python3 -m routing_lab optimize --base-policy ID --objective ID --suite development",
+      "approval": "none; creates a proposal and cannot access confirmation"
+    },
+    {
+      "action": "List or inspect optimizer proposals",
+      "agent_and_human_interface": "python3 -m routing_lab proposal list|show",
+      "approval": "none"
+    },
+    {
+      "action": "Delete an optimizer proposal",
+      "agent_and_human_interface": "python3 -m routing_lab proposal delete ID --yes",
+      "approval": "explicit --yes flag"
+    },
+    {
+      "action": "Apply an optimizer proposal to local simulation state",
+      "agent_and_human_interface": "python3 -m routing_lab proposal apply ID --approved-by HUMAN",
+      "approval": "named human; does not authorize confirmation, scientific, online, or production use"
+    },
+    {
+      "action": "Explicitly record task completion",
+      "agent_and_human_interface": "python3 -m routing_lab complete-task --summary TEXT [--evidence PATH]",
+      "approval": "none"
+    }
+  ],
+  "parity_rule": "The CLI is the shared human and agent control surface; no hidden UI-only action exists.",
+  "schema_version": "1.0"
+}

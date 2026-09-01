@@ -1,0 +1,11 @@
+{
+  "complexity": 0.82,
+  "id": "example-reasoning-call",
+  "max_cost_usd": 0.06,
+  "max_latency_ms": 4500,
+  "required_capabilities": [
+    "reasoning"
+  ],
+  "risk": "high",
+  "route_kind": "model"
+}

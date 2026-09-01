@@ -1,0 +1,18 @@
+{
+  "description": "Sensitivity objective that prioritizes success and regret reduction.",
+  "hard_guardrails": {
+    "max_hard_violation_rate": 0.0,
+    "max_success_regression": 0.0
+  },
+  "id": "quality-first-v1",
+  "meaningful_improvement": 0.01,
+  "metric_weights": {
+    "abstention": 0.1,
+    "brier": 0.15,
+    "cost_utilization": 0.02,
+    "hard_violation": 2.0,
+    "latency_utilization": 0.02,
+    "oracle_regret": 0.35,
+    "task_success": 1.2
+  }
+}

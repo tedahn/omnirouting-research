@@ -1,0 +1,53 @@
+{
+  "description": "Locked synthetic confirmation case for a simple tool call.",
+  "id": "confirm-fast-tool-call",
+  "outcomes": {
+    "balanced-general": {
+      "cost_usd": 0.012,
+      "latency_ms": 870,
+      "pass": true,
+      "quality": 0.91
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.041,
+      "latency_ms": 2850,
+      "pass": true,
+      "quality": 0.95
+    },
+    "fast-general": {
+      "cost_usd": 0.002,
+      "latency_ms": 240,
+      "pass": true,
+      "quality": 0.87
+    }
+  },
+  "partition": "confirmation",
+  "predictions": {
+    "balanced-general": {
+      "cost_usd": 0.012,
+      "latency_ms": 860,
+      "pass_probability": 0.92
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.041,
+      "latency_ms": 2800,
+      "pass_probability": 0.95
+    },
+    "fast-general": {
+      "cost_usd": 0.002,
+      "latency_ms": 230,
+      "pass_probability": 0.89
+    }
+  },
+  "request": {
+    "complexity": 0.18,
+    "id": "confirm-fast-tool-call",
+    "max_cost_usd": 0.02,
+    "max_latency_ms": 1200,
+    "required_capabilities": [
+      "tool_use"
+    ],
+    "risk": "low",
+    "route_kind": "model"
+  }
+}

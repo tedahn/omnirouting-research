@@ -1,0 +1,42 @@
+{
+  "description": "Locked synthetic confirmation case for agent triage.",
+  "id": "confirm-agent-triage",
+  "outcomes": {
+    "quick-agent": {
+      "cost_usd": 0.012,
+      "latency_ms": 920,
+      "pass": true,
+      "quality": 0.82
+    },
+    "workflow-agent": {
+      "cost_usd": 0.052,
+      "latency_ms": 3250,
+      "pass": true,
+      "quality": 0.91
+    }
+  },
+  "partition": "confirmation",
+  "predictions": {
+    "quick-agent": {
+      "cost_usd": 0.012,
+      "latency_ms": 930,
+      "pass_probability": 0.81
+    },
+    "workflow-agent": {
+      "cost_usd": 0.052,
+      "latency_ms": 3200,
+      "pass_probability": 0.9
+    }
+  },
+  "request": {
+    "complexity": 0.28,
+    "id": "confirm-agent-triage",
+    "max_cost_usd": 0.026,
+    "max_latency_ms": 1600,
+    "required_capabilities": [
+      "triage"
+    ],
+    "risk": "medium",
+    "route_kind": "agent"
+  }
+}

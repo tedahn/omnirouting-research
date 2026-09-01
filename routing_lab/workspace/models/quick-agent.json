@@ -1,0 +1,16 @@
+{
+  "capabilities": [
+    "tool_use",
+    "triage",
+    "workflow_planning"
+  ],
+  "complexity_affinity": 0.3,
+  "cost_usd": 0.012,
+  "description": "Synthetic low-latency agent target for short tool loops.",
+  "enabled": true,
+  "id": "quick-agent",
+  "kind": "agent",
+  "latency_ms": 950,
+  "provider": "fixture",
+  "quality_prior": 0.72
+}

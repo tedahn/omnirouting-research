@@ -1,0 +1,59 @@
+{
+  "description": "Example mixed model/agent workflow; each stage is routed independently.",
+  "id": "research-assist-v1",
+  "stages": [
+    {
+      "id": "triage",
+      "request_overrides": {
+        "complexity": 0.15,
+        "max_cost_usd": 0.02,
+        "max_latency_ms": 1200,
+        "risk": "low"
+      },
+      "required_capabilities": [
+        "classification"
+      ],
+      "route_kind": "model"
+    },
+    {
+      "id": "plan",
+      "request_overrides": {
+        "complexity": 0.8,
+        "max_cost_usd": 0.08,
+        "max_latency_ms": 5000,
+        "risk": "high"
+      },
+      "required_capabilities": [
+        "workflow_planning"
+      ],
+      "route_kind": "agent"
+    },
+    {
+      "id": "execute",
+      "request_overrides": {
+        "complexity": 0.65,
+        "max_cost_usd": 0.08,
+        "max_latency_ms": 5000,
+        "risk": "medium"
+      },
+      "required_capabilities": [
+        "research",
+        "tool_use"
+      ],
+      "route_kind": "agent"
+    },
+    {
+      "id": "review",
+      "request_overrides": {
+        "complexity": 0.9,
+        "max_cost_usd": 0.06,
+        "max_latency_ms": 4500,
+        "risk": "high"
+      },
+      "required_capabilities": [
+        "reasoning"
+      ],
+      "route_kind": "model"
+    }
+  ]
+}

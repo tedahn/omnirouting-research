@@ -1,0 +1,18 @@
+{
+  "capabilities": [
+    "code",
+    "research",
+    "synthesis",
+    "tool_use",
+    "workflow_planning"
+  ],
+  "complexity_affinity": 0.8,
+  "cost_usd": 0.05,
+  "description": "Synthetic higher-capability agent target for long workflows.",
+  "enabled": true,
+  "id": "workflow-agent",
+  "kind": "agent",
+  "latency_ms": 3200,
+  "provider": "fixture",
+  "quality_prior": 0.9
+}

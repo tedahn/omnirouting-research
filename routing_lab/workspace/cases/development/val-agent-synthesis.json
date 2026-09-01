@@ -1,0 +1,43 @@
+{
+  "description": "Validation analogue for complex multi-source synthesis.",
+  "id": "val-agent-synthesis",
+  "outcomes": {
+    "quick-agent": {
+      "cost_usd": 0.015,
+      "latency_ms": 1350,
+      "pass": false,
+      "quality": 0.36
+    },
+    "workflow-agent": {
+      "cost_usd": 0.056,
+      "latency_ms": 3600,
+      "pass": true,
+      "quality": 0.91
+    }
+  },
+  "partition": "validation",
+  "predictions": {
+    "quick-agent": {
+      "cost_usd": 0.015,
+      "latency_ms": 1300,
+      "pass_probability": 0.4
+    },
+    "workflow-agent": {
+      "cost_usd": 0.056,
+      "latency_ms": 3500,
+      "pass_probability": 0.89
+    }
+  },
+  "request": {
+    "complexity": 0.88,
+    "id": "val-agent-synthesis",
+    "max_cost_usd": 0.075,
+    "max_latency_ms": 4700,
+    "required_capabilities": [
+      "synthesis",
+      "tool_use"
+    ],
+    "risk": "high",
+    "route_kind": "agent"
+  }
+}

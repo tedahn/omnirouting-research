@@ -1,0 +1,42 @@
+{
+  "description": "Complex agent planning should use the workflow-capable target.",
+  "id": "dev-agent-planning",
+  "outcomes": {
+    "quick-agent": {
+      "cost_usd": 0.014,
+      "latency_ms": 1250,
+      "pass": false,
+      "quality": 0.39
+    },
+    "workflow-agent": {
+      "cost_usd": 0.054,
+      "latency_ms": 3500,
+      "pass": true,
+      "quality": 0.92
+    }
+  },
+  "partition": "train",
+  "predictions": {
+    "quick-agent": {
+      "cost_usd": 0.014,
+      "latency_ms": 1200,
+      "pass_probability": 0.42
+    },
+    "workflow-agent": {
+      "cost_usd": 0.054,
+      "latency_ms": 3400,
+      "pass_probability": 0.9
+    }
+  },
+  "request": {
+    "complexity": 0.85,
+    "id": "dev-agent-planning",
+    "max_cost_usd": 0.07,
+    "max_latency_ms": 4500,
+    "required_capabilities": [
+      "workflow_planning"
+    ],
+    "risk": "high",
+    "route_kind": "agent"
+  }
+}

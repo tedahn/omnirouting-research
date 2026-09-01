@@ -1,0 +1,53 @@
+{
+  "description": "Validation analogue for critical high-stakes review.",
+  "id": "val-critical-review",
+  "outcomes": {
+    "balanced-general": {
+      "cost_usd": 0.014,
+      "latency_ms": 1120,
+      "pass": false,
+      "quality": 0.5
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.045,
+      "latency_ms": 3250,
+      "pass": true,
+      "quality": 0.96
+    },
+    "fast-general": {
+      "cost_usd": 0.003,
+      "latency_ms": 360,
+      "pass": false,
+      "quality": 0.24
+    }
+  },
+  "partition": "validation",
+  "predictions": {
+    "balanced-general": {
+      "cost_usd": 0.014,
+      "latency_ms": 1100,
+      "pass_probability": 0.57
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.045,
+      "latency_ms": 3200,
+      "pass_probability": 0.94
+    },
+    "fast-general": {
+      "cost_usd": 0.003,
+      "latency_ms": 350,
+      "pass_probability": 0.27
+    }
+  },
+  "request": {
+    "complexity": 0.95,
+    "id": "val-critical-review",
+    "max_cost_usd": 0.055,
+    "max_latency_ms": 3800,
+    "required_capabilities": [
+      "high_stakes_review"
+    ],
+    "risk": "critical",
+    "route_kind": "model"
+  }
+}

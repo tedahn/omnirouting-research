@@ -1,0 +1,53 @@
+{
+  "description": "Locked synthetic confirmation case for difficult reasoning.",
+  "id": "confirm-reasoning",
+  "outcomes": {
+    "balanced-general": {
+      "cost_usd": 0.014,
+      "latency_ms": 1150,
+      "pass": false,
+      "quality": 0.52
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.044,
+      "latency_ms": 3300,
+      "pass": true,
+      "quality": 0.94
+    },
+    "fast-general": {
+      "cost_usd": 0.003,
+      "latency_ms": 370,
+      "pass": false,
+      "quality": 0.26
+    }
+  },
+  "partition": "confirmation",
+  "predictions": {
+    "balanced-general": {
+      "cost_usd": 0.014,
+      "latency_ms": 1120,
+      "pass_probability": 0.59
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.044,
+      "latency_ms": 3250,
+      "pass_probability": 0.92
+    },
+    "fast-general": {
+      "cost_usd": 0.003,
+      "latency_ms": 360,
+      "pass_probability": 0.3
+    }
+  },
+  "request": {
+    "complexity": 0.9,
+    "id": "confirm-reasoning",
+    "max_cost_usd": 0.055,
+    "max_latency_ms": 3900,
+    "required_capabilities": [
+      "reasoning"
+    ],
+    "risk": "high",
+    "route_kind": "model"
+  }
+}
