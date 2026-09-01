@@ -1,0 +1,26 @@
+{
+  "abstain_below": 0.35,
+  "description": "Multi-objective development policy with risk-aware quality floors.",
+  "eligible_kinds": [
+    "model",
+    "agent"
+  ],
+  "fallback_target": "deep-reasoner",
+  "id": "adaptive-score-v1",
+  "method": "score",
+  "normalization": {
+    "cost_usd": 0.05,
+    "latency_ms": 4000
+  },
+  "quality_floor_by_risk": {
+    "critical": 0.85,
+    "high": 0.7,
+    "low": 0.35,
+    "medium": 0.5
+  },
+  "weights": {
+    "cost": 0.2,
+    "latency": 0.2,
+    "quality": 0.6
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "default_target": "balanced-general",
+  "description": "Static comparator. It intentionally cannot route agent-kind work.",
+  "eligible_kinds": [
+    "model",
+    "agent"
+  ],
+  "fallback_target": "deep-reasoner",
+  "id": "baseline-static-v1",
+  "method": "static",
+  "normalization": {
+    "cost_usd": 0.05,
+    "latency_ms": 4000
+  }
+}

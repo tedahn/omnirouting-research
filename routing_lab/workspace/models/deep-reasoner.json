@@ -1,0 +1,21 @@
+{
+  "capabilities": [
+    "classification",
+    "code",
+    "extraction",
+    "high_stakes_review",
+    "long_context",
+    "reasoning",
+    "text",
+    "tool_use"
+  ],
+  "complexity_affinity": 0.9,
+  "cost_usd": 0.04,
+  "description": "Synthetic high-capability model used for deterministic fixtures.",
+  "enabled": true,
+  "id": "deep-reasoner",
+  "kind": "model",
+  "latency_ms": 2800,
+  "provider": "fixture",
+  "quality_prior": 0.94
+}

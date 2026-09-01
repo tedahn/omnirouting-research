@@ -1,0 +1,18 @@
+{
+  "description": "Sensitivity objective that increases cost and latency pressure.",
+  "hard_guardrails": {
+    "max_hard_violation_rate": 0.0,
+    "max_success_regression": 0.0
+  },
+  "id": "efficiency-first-v1",
+  "meaningful_improvement": 0.01,
+  "metric_weights": {
+    "abstention": 0.2,
+    "brier": 0.1,
+    "cost_utilization": 0.2,
+    "hard_violation": 2.0,
+    "latency_utilization": 0.2,
+    "oracle_regret": 0.1,
+    "task_success": 1.0
+  }
+}

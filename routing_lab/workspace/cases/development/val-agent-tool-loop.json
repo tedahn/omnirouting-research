@@ -1,0 +1,42 @@
+{
+  "description": "Validation analogue for a bounded low-cost tool loop.",
+  "id": "val-agent-tool-loop",
+  "outcomes": {
+    "quick-agent": {
+      "cost_usd": 0.011,
+      "latency_ms": 880,
+      "pass": true,
+      "quality": 0.81
+    },
+    "workflow-agent": {
+      "cost_usd": 0.049,
+      "latency_ms": 3000,
+      "pass": true,
+      "quality": 0.9
+    }
+  },
+  "partition": "validation",
+  "predictions": {
+    "quick-agent": {
+      "cost_usd": 0.011,
+      "latency_ms": 900,
+      "pass_probability": 0.8
+    },
+    "workflow-agent": {
+      "cost_usd": 0.049,
+      "latency_ms": 3050,
+      "pass_probability": 0.89
+    }
+  },
+  "request": {
+    "complexity": 0.3,
+    "id": "val-agent-tool-loop",
+    "max_cost_usd": 0.025,
+    "max_latency_ms": 1500,
+    "required_capabilities": [
+      "tool_use"
+    ],
+    "risk": "medium",
+    "route_kind": "agent"
+  }
+}

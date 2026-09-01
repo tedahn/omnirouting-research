@@ -1,0 +1,43 @@
+{
+  "description": "Locked synthetic confirmation case for long-horizon agent research.",
+  "id": "confirm-agent-research",
+  "outcomes": {
+    "quick-agent": {
+      "cost_usd": 0.016,
+      "latency_ms": 1400,
+      "pass": false,
+      "quality": 0.34
+    },
+    "workflow-agent": {
+      "cost_usd": 0.058,
+      "latency_ms": 3700,
+      "pass": true,
+      "quality": 0.9
+    }
+  },
+  "partition": "confirmation",
+  "predictions": {
+    "quick-agent": {
+      "cost_usd": 0.016,
+      "latency_ms": 1380,
+      "pass_probability": 0.39
+    },
+    "workflow-agent": {
+      "cost_usd": 0.058,
+      "latency_ms": 3650,
+      "pass_probability": 0.88
+    }
+  },
+  "request": {
+    "complexity": 0.9,
+    "id": "confirm-agent-research",
+    "max_cost_usd": 0.08,
+    "max_latency_ms": 4800,
+    "required_capabilities": [
+      "research",
+      "tool_use"
+    ],
+    "risk": "high",
+    "route_kind": "agent"
+  }
+}

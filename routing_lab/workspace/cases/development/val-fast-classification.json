@@ -1,0 +1,53 @@
+{
+  "description": "Validation analogue for latency-sensitive classification.",
+  "id": "val-fast-classification",
+  "outcomes": {
+    "balanced-general": {
+      "cost_usd": 0.011,
+      "latency_ms": 830,
+      "pass": true,
+      "quality": 0.9
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.039,
+      "latency_ms": 2700,
+      "pass": true,
+      "quality": 0.95
+    },
+    "fast-general": {
+      "cost_usd": 0.002,
+      "latency_ms": 210,
+      "pass": true,
+      "quality": 0.86
+    }
+  },
+  "partition": "validation",
+  "predictions": {
+    "balanced-general": {
+      "cost_usd": 0.011,
+      "latency_ms": 820,
+      "pass_probability": 0.92
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.039,
+      "latency_ms": 2700,
+      "pass_probability": 0.96
+    },
+    "fast-general": {
+      "cost_usd": 0.002,
+      "latency_ms": 220,
+      "pass_probability": 0.88
+    }
+  },
+  "request": {
+    "complexity": 0.12,
+    "id": "val-fast-classification",
+    "max_cost_usd": 0.018,
+    "max_latency_ms": 1000,
+    "required_capabilities": [
+      "classification"
+    ],
+    "risk": "low",
+    "route_kind": "model"
+  }
+}

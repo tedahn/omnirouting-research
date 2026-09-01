@@ -23,6 +23,7 @@ Independent research workspace for studying how companies are developing omni ro
 
 - `project/` — validated ChatGPT Project instructions, kickoff prompt, handbooks, and blank upload templates.
 - `research/` — active company, methodology, outcome, forecast, evidence, evaluation, brief, decision, snapshot, workflow, prompt, and next-action records.
+- `routing_lab/` — local, simulation-only agent/model routing harness with synthetic fixtures, agent-parity CLI, evaluation, and guarded optimization proposals.
 - `WORKSPACE_CHARTER.md` — stable purpose, boundaries, authority, and review rules.
 - `CURRENT_STATE.md` — dated operating state and unresolved questions.
 - `WORKSPACE_ORIGIN.md` — foundry lineage and migration policy.

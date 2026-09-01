@@ -1,0 +1,18 @@
+{
+  "description": "Balanced development utility with hard zero-violation preference.",
+  "hard_guardrails": {
+    "max_hard_violation_rate": 0.0,
+    "max_success_regression": 0.0
+  },
+  "id": "balanced-objective-v1",
+  "meaningful_improvement": 0.01,
+  "metric_weights": {
+    "abstention": 0.15,
+    "brier": 0.1,
+    "cost_utilization": 0.05,
+    "hard_violation": 2.0,
+    "latency_utilization": 0.05,
+    "oracle_regret": 0.2,
+    "task_success": 1.0
+  }
+}

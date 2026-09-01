@@ -1,0 +1,53 @@
+{
+  "description": "Low-risk extraction should prefer the efficient target.",
+  "id": "dev-fast-extraction",
+  "outcomes": {
+    "balanced-general": {
+      "cost_usd": 0.012,
+      "latency_ms": 860,
+      "pass": true,
+      "quality": 0.92
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.04,
+      "latency_ms": 2750,
+      "pass": true,
+      "quality": 0.96
+    },
+    "fast-general": {
+      "cost_usd": 0.002,
+      "latency_ms": 220,
+      "pass": true,
+      "quality": 0.88
+    }
+  },
+  "partition": "train",
+  "predictions": {
+    "balanced-general": {
+      "cost_usd": 0.012,
+      "latency_ms": 850,
+      "pass_probability": 0.94
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.04,
+      "latency_ms": 2800,
+      "pass_probability": 0.97
+    },
+    "fast-general": {
+      "cost_usd": 0.002,
+      "latency_ms": 230,
+      "pass_probability": 0.9
+    }
+  },
+  "request": {
+    "complexity": 0.1,
+    "id": "dev-fast-extraction",
+    "max_cost_usd": 0.02,
+    "max_latency_ms": 1100,
+    "required_capabilities": [
+      "extraction"
+    ],
+    "risk": "low",
+    "route_kind": "model"
+  }
+}

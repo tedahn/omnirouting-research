@@ -1,0 +1,20 @@
+{
+  "capabilities": [
+    "classification",
+    "code",
+    "extraction",
+    "long_context",
+    "reasoning",
+    "text",
+    "tool_use"
+  ],
+  "complexity_affinity": 0.55,
+  "cost_usd": 0.012,
+  "description": "Synthetic balanced model used for deterministic fixtures.",
+  "enabled": true,
+  "id": "balanced-general",
+  "kind": "model",
+  "latency_ms": 900,
+  "provider": "fixture",
+  "quality_prior": 0.82
+}

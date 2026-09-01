@@ -1,0 +1,43 @@
+{
+  "description": "Short agent triage should use the inexpensive agent target.",
+  "id": "dev-agent-triage",
+  "outcomes": {
+    "quick-agent": {
+      "cost_usd": 0.012,
+      "latency_ms": 900,
+      "pass": true,
+      "quality": 0.84
+    },
+    "workflow-agent": {
+      "cost_usd": 0.05,
+      "latency_ms": 3100,
+      "pass": true,
+      "quality": 0.93
+    }
+  },
+  "partition": "train",
+  "predictions": {
+    "quick-agent": {
+      "cost_usd": 0.012,
+      "latency_ms": 950,
+      "pass_probability": 0.82
+    },
+    "workflow-agent": {
+      "cost_usd": 0.05,
+      "latency_ms": 3200,
+      "pass_probability": 0.91
+    }
+  },
+  "request": {
+    "complexity": 0.25,
+    "id": "dev-agent-triage",
+    "max_cost_usd": 0.025,
+    "max_latency_ms": 1500,
+    "required_capabilities": [
+      "triage",
+      "tool_use"
+    ],
+    "risk": "medium",
+    "route_kind": "agent"
+  }
+}

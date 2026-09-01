@@ -1,0 +1,53 @@
+{
+  "description": "High-risk reasoning should clear a quality floor and use the deep target.",
+  "id": "dev-hard-reasoning",
+  "outcomes": {
+    "balanced-general": {
+      "cost_usd": 0.013,
+      "latency_ms": 1050,
+      "pass": false,
+      "quality": 0.54
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.043,
+      "latency_ms": 3100,
+      "pass": true,
+      "quality": 0.95
+    },
+    "fast-general": {
+      "cost_usd": 0.0025,
+      "latency_ms": 340,
+      "pass": false,
+      "quality": 0.28
+    }
+  },
+  "partition": "train",
+  "predictions": {
+    "balanced-general": {
+      "cost_usd": 0.013,
+      "latency_ms": 1100,
+      "pass_probability": 0.61
+    },
+    "deep-reasoner": {
+      "cost_usd": 0.043,
+      "latency_ms": 3050,
+      "pass_probability": 0.93
+    },
+    "fast-general": {
+      "cost_usd": 0.0025,
+      "latency_ms": 330,
+      "pass_probability": 0.31
+    }
+  },
+  "request": {
+    "complexity": 0.92,
+    "id": "dev-hard-reasoning",
+    "max_cost_usd": 0.05,
+    "max_latency_ms": 3600,
+    "required_capabilities": [
+      "reasoning"
+    ],
+    "risk": "high",
+    "route_kind": "model"
+  }
+}

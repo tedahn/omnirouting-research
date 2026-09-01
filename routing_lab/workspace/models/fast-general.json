@@ -1,0 +1,17 @@
+{
+  "capabilities": [
+    "classification",
+    "extraction",
+    "text",
+    "tool_use"
+  ],
+  "complexity_affinity": 0.2,
+  "cost_usd": 0.002,
+  "description": "Synthetic fast model used for deterministic fixtures.",
+  "enabled": true,
+  "id": "fast-general",
+  "kind": "model",
+  "latency_ms": 250,
+  "provider": "fixture",
+  "quality_prior": 0.68
+}
